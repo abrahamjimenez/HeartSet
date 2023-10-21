@@ -13,17 +13,7 @@
 	<!-- Link SCSS -->
 	<link rel="stylesheet" href="styles.css">
 	<title>HeartSet</title>
-	<script>
-		function fetchCurrentValue() {
-			fetch('/getCurrentValue')
-				.then(response => response.json())
-				.then(data => {
-					document.getElementById('currentValue').innerText = data.heartRate;
-				});
-		}
-
-		setInterval(fetchCurrentValue, 5000);
-	</script>
+	<script src="main.js" defer></script>
 </head>
 <body onload="fetchCurrentValue();">
 <div id="leaf-rain">
