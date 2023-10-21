@@ -1,5 +1,4 @@
-$green: #0E400E;
-$yellow: #FFDA0A;
+$green: #063509;
 $hover: #677a6c;
 $light: #dfebe2;
 
@@ -26,7 +25,7 @@ a {
     }
 }
 h1 {
-    color: $yellow;
+    color: $light;
     font-family: 'Courgette', cursive;
 }
 h3 {
@@ -43,9 +42,13 @@ h3 {
 /* Top Half */
 .top--half {
     display: grid;
-    grid-template-rows: 2fr 1fr 3fr;
-    align-items: center;
-    margin: 16px;
+  grid-template-rows: 2fr 1fr 3fr;
+  align-items: center;
+  margin: 16px;
+  background: url("images/Tree.svg") no-repeat center/100%;
+  width: 100%;
+  height: auto;
+  z-index: 10;
 	p {
 		color:#dfebe2;
 	}
@@ -116,7 +119,7 @@ footer .card {
 	margin: 10px 0;
 }
 #leaf-rain {
-	background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
+	background: url("images/leaf.svg"), url("images/leaf.svg"), url("images/leaf.svg");
 	animation: leaf-rain 2000s linear infinite;
 }
 
@@ -131,7 +134,7 @@ footer .card {
 
 @media (prefers-reduced-motion) {
 	#leaf-rain {
-		background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
+		background: url("images/leaf.svg"), url("images/leaf.svg"), url("images/leaf.svg");
 		animation: leaf-rain 5000s linear infinite;
 	}
 }
