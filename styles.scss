@@ -1,0 +1,75 @@
+$green: #0E400E;
+$yellow: #FFDA0A;
+$hover: #677a6c;
+$light: #dfebe2;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 160px;
+    background-color: $green;
+    font-family: 'Noto Sans JP', sans-serif;
+    // background-image: url(../images/Screenshot\ 2023-10-20\ 222252.png);
+    // background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    &:hover {
+        color: $hover;
+    }
+}
+h1 {
+    color: $yellow;
+    font-family: 'Handlee', cursive;
+}
+h3 {
+    margin-bottom: 5px;
+}
+.top--half {
+    display: grid;
+    grid-template-rows: 2fr 1fr 3fr;
+    align-items: center;
+    margin: 16px;
+}
+.top--half h1 {
+    align-self: end;
+}
+.top__img {
+    width: 50px;
+    height: 50px;
+    background: black;
+    justify-self: right;
+}
+.top__img p {
+    color: white;
+}
+  /* Bottom Half */
+.bottom--half {
+    display: flex;
+}
+.bottom--half iframe {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 20px;
+}
+    /* Footer */
+footer {
+    background-color: $green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+footer .card {
+    background: $light;
+    width: 70%;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+}
