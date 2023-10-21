@@ -161,10 +161,9 @@ footer .card {
     animation: leaf-rain 5000s linear infinite;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   body {
     display: none;
-    content: "Please open on a larger view";
   }
 }
 
