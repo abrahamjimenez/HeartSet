@@ -13,7 +13,16 @@
 	<!-- Link SCSS -->
 	<link rel="stylesheet" href="styles.css">
 	<title>HeartSet</title>
-	<script src="main.js" defer></script>
+	<script src="main.js" type="module">
+		function fetchCurrentValue() {
+			fetch('/getCurrentValue')
+			.then(response => response.json())
+			.then(data => {
+				document.getElementById('currentValue').innerText = data.heartRate;
+			});
+    		changeColor();
+		}
+	</script>
 </head>
 <body onload="fetchCurrentValue();">
 <div class="small-view">

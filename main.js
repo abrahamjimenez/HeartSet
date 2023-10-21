@@ -1,15 +1,7 @@
-import changeHue from "./changeHue.mjs"
-
-function fetchCurrentValue() {
-    fetch('/getCurrentValue')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('currentValue').innerText = data.heartRate;
-        });
-    changeColor(data.heartRate);
-}
-
-function changeColor(heartRate) {
+import changeHue from "./changeHue.mjs";
+export {changeColor};
+function changeColor() {
+    heartRate = document.getElementById('currentValue').innerText;
     if (heartRate >= 130) {
         let darkValue = changeHue("#063509", 80)
         let midValue = changeHue("#677a6c", 80)
@@ -26,6 +18,8 @@ function changeColor(heartRate) {
         // document.documentElement.style.setProperty("background-color", midValue);
         // document.documentElement.style.setProperty("color", lightValue);
     }
+    console.log(heartRate);
+    console.log(darkValue);
 }
 
 setInterval(fetchCurrentValue, 5000);
