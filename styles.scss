@@ -78,3 +78,23 @@ footer .card {
     padding: 20px;
     margin: 10px 0;
 }
+#leaf-rain {
+	background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
+	animation: leaf-rain 2000s linear infinite;
+}
+
+@keyframes leaf-rain {
+	0% {
+		background-position: 0 0, 0 0, 0 0;
+	}
+	100% {
+		background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	#leaf-rain {
+		background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
+		animation: leaf-rain 5000s linear infinite;
+	}
+}
