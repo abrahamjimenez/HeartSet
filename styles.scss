@@ -137,3 +137,11 @@ footer .card {
 
 	}
 }
+
+// _media-query.scss
+@media screen and (max-width: 1000px) {
+	body {
+		display: none;
+		content: 'Please open on a larger view';
+	}
+}
