@@ -32,19 +32,23 @@ h3 {
 }
 .logo {
     display: flex;
-    height: 70px;
+    height: 50px;
     font-size: 1.5em;
+    align-items: center;
+    column-gap: 15px;
 }
 /* Top Half */
 .top--half {
 	display: grid;
 	grid-template-rows: 2fr 1fr 3fr;
 	align-items: center;
-	margin: 16px;
 	background: url("images/Tree.svg") no-repeat center;
 	width: 100%;
 	height: auto;
 	z-index: 10;
+	p {
+		color:#dfebe2;
+	}
 }
 
 .top--half h1 {
