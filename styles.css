@@ -4,7 +4,7 @@
 }
 
 body {
-  height: auto;
+  height: 100vh;
   display: grid;
   grid-template-rows: 1fr 1fr 160px;
   background-color: #0E400E;
@@ -35,11 +35,16 @@ h3 {
   font-size: 1.5em;
 }
 
+/* Top Half */
 .top--half {
   display: grid;
   grid-template-rows: 2fr 1fr 3fr;
   align-items: center;
   margin: 16px;
+  background: url("images/Tree.svg") no-repeat center;
+  width: 100%;
+  height: auto;
+  z-index: 10;
 }
 
 .top--half h1 {
@@ -70,6 +75,25 @@ h3 {
 }
 
 /* Footer */
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+a:hover {
+  color: #677a6c;
+}
+
+h1 {
+  color: #FFDA0A;
+  font-family: "Handlee", cursive;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+/* Footer */
 footer {
   background-color: #0E400E;
   display: grid;
@@ -83,4 +107,26 @@ footer .card {
   border-radius: 8px;
   padding: 20px;
   margin: 10px 0;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+#leaf-rain {
+  background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
+  animation: leaf-rain 2000s linear infinite;
+}
+
+@keyframes leaf-rain {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;
+  }
+}
+@media (prefers-reduced-motion) {
+  #leaf-rain {
+    background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
+    animation: leaf-rain 5000s linear infinite;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
