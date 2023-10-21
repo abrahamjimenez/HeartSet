@@ -2,10 +2,9 @@ const express = require('express');
 const app = express();
 const port = 6969
 
-
-app.get('/', (req, res) => {
-	res.send('Hello, Express.js!');
-});
+app.get('/', (req, res) =>{
+	res.sendFile("C:/Users/sasal/Desktop/Projects/HeartSet/public/index.html")
+})
 
 app.listen(port, () => {
 	console.log(`Server is running on port ${port}`);
