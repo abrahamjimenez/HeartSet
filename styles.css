@@ -31,8 +31,12 @@ h3 {
 
 .logo {
   display: flex;
-  height: 70px;
+  height: 50px;
   font-size: 1.5em;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  margin-left: 20px;
 }
 
 /* Top Half */
@@ -45,6 +49,9 @@ h3 {
   width: 100%;
   height: auto;
   z-index: 10;
+}
+.top--half p {
+  color: #dfebe2;
 }
 
 .top--half h1 {
@@ -127,6 +134,4 @@ footer .card {
     background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
     animation: leaf-rain 5000s linear infinite;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
