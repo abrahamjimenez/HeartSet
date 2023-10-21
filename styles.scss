@@ -118,6 +118,34 @@ footer .card {
 	}
 }
 
+@keyframes beat-heart {
+	0% {
+	  transform: scale(1);
+	}
+	45% {
+		transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.2);
+	}
+	55% {
+		transform: scale(1);
+	  }
+	60% {
+		transform: scale(1.2);
+	  }
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+  .top__img img {
+	animation-name: beat-heart;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+  }
+
 @media (prefers-reduced-motion) {
 	#leaf-rain {
 		background: url("images/leaf-3.png");
