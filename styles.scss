@@ -1,4 +1,5 @@
 $green: #063509;
+$mid: #2f4c31;
 $hover: #677a6c;
 $light: #dfebe2;
 
@@ -10,6 +11,11 @@ $light: #dfebe2;
 body {
 	background-color: $green;
 	font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+.small-view {
+	display: none;
 }
 
 a {
@@ -173,8 +179,29 @@ footer .card {
 }
 
 // _media-query.scss
+
 @media screen and (max-width: 800px) {
-	body {
+	#leaf-rain {
 		display: none;
+	}
+
+	body {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 16px;
+	}
+
+	.small-view {
+		display: block;
+
+		p {
+			text-align: center;
+			color: white;
+			font-size: 1.4rem;
+			margin-bottom: 16px;
+		}
+
 	}
 }

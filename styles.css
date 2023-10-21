@@ -8,6 +8,10 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.small-view {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -161,9 +165,27 @@ footer .card {
     animation: leaf-rain 5000s linear infinite;
   }
 }
+
 @media screen and (max-width: 800px) {
-  body {
+  #leaf-rain {
     display: none;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .small-view {
+    display: block;
+  }
+  .small-view p {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+
   }
 }
 
