@@ -31,8 +31,7 @@ h3 {
   display: flex;
   height: 85px;
   align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 
 /* Top Half */
@@ -149,6 +148,7 @@ footer .card {
   }
 }
 .top__img img {
+  height: 80px;
   animation-name: beat-heart;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -166,4 +166,6 @@ footer .card {
     display: none;
     content: "Please open on a larger view";
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
