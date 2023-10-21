@@ -134,4 +134,11 @@ footer .card {
     background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
     animation: leaf-rain 5000s linear infinite;
   }
-}/*# sourceMappingURL=styles.css.map */
+  
+}
+@media screen and (max-width: 1000px) {
+  body {
+    display: none;
+    content: "Please open on a larger view";
+  }
+}

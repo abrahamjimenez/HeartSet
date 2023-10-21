@@ -1,5 +1,7 @@
 $green: #0E400E;
 $yellow: #FFDA0A;
+$hover: #677a6c;
+$light: #dfebe2;
 
 * {
 	padding: 0;
@@ -131,5 +133,13 @@ footer .card {
 	#leaf-rain {
 		background: url("images/corndog-tile.png"), url("images/corndog-tile-1.png"), url("images/corndog-tile-2.png");
 		animation: leaf-rain 5000s linear infinite;
+	}
+}
+
+// _media-query.scss
+@media screen and (max-width: 1000px) {
+	body {
+		display: none;
+		content: 'Please open on a larger view';
 	}
 }
