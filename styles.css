@@ -31,8 +31,7 @@ h3 {
   display: flex;
   height: 85px;
   align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 
 /* Top Half */
@@ -97,7 +96,6 @@ h3 {
 
 /* Footer */
 footer {
-  background-color: #063509;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
@@ -115,7 +113,7 @@ footer .card {
 #leaf-rain {
   background: url("images/leaf-3.png");
   background-size: 10%;
-  animation: leaf-rain 2000s linear infinite;
+  background-position: center top;
 }
 
 @keyframes leaf-rain {
@@ -137,4 +135,6 @@ footer .card {
     display: none;
     content: "Please open on a larger view";
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
