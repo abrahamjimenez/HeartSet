@@ -8,6 +8,10 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.small-view {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -31,8 +35,7 @@ h3 {
   display: flex;
   height: 85px;
   align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 
 /* Top Half */
@@ -96,10 +99,12 @@ h3 {
 
 /* Footer */
 footer {
+  background-color: #2f4c31;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin-top: 100px;
+  padding: 50px;
 }
 
 footer .card {
@@ -108,11 +113,13 @@ footer .card {
   border-radius: 8px;
   padding: 20px;
   margin: 10px 0;
+  border: solid 5px #063509;
 }
 
 #leaf-rain {
   background: url("images/leaf-3.png");
   background-size: 10%;
+  animation: leaf-rain 2000s linear infinite;
   background-position: center top;
 }
 
@@ -124,15 +131,62 @@ footer .card {
     background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;
   }
 }
+@keyframes beat-heart {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  55% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.top__img img {
+  height: 80px;
+  animation-name: beat-heart;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 @media (prefers-reduced-motion) {
   #leaf-rain {
     background: url("images/leaf-3.png");
     animation: leaf-rain 5000s linear infinite;
   }
 }
-@media screen and (max-width: 1000px) {
-  body {
+
+@media screen and (max-width: 800px) {
+  #leaf-rain {
     display: none;
-    content: "Please open on a larger view";
   }
-}/*# sourceMappingURL=styles.css.map */
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .small-view {
+    display: block;
+  }
+  .small-view p {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
