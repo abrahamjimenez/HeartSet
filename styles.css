@@ -4,8 +4,6 @@
 }
 
 body {
-  display: grid;
-  grid-template-rows: 1fr 1fr 160px;
   background-color: #063509;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -40,12 +38,13 @@ h3 {
 /* Top Half */
 .top--half {
   display: grid;
-  grid-template-rows: 2fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   background: url("images/tree.svg") no-repeat center top;
   max-height: 40%;
 }
 .top--half p {
+  font-family: "Quicksand", sans-serif;
   color: #dfebe2;
 }
 
@@ -102,6 +101,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  margin-top: 100px;
 }
 
 footer .card {
@@ -113,6 +113,8 @@ footer .card {
 }
 
 #leaf-rain {
+  background: url("images/leaf-3.png");
+  background-size: 10%;
   animation: leaf-rain 2000s linear infinite;
 }
 
@@ -126,7 +128,7 @@ footer .card {
 }
 @media (prefers-reduced-motion) {
   #leaf-rain {
-    background: url("images/leaf.svg"), url("images/leaf.svg"), url("images/leaf.svg");
+    background: url("images/leaf-3.png");
     animation: leaf-rain 5000s linear infinite;
   }
 }

@@ -6,13 +6,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/logo.ico">
      <!-- Link SCSS -->
     <link rel="stylesheet" href="styles.css">
     <title>HeartSet</title>
-  </head>
-  
-  <body>
+    <script>
+      function fetchCurrentValue() {
+          fetch('/getCurrentValue')
+              .then(response => response.json())
+              .then(data => {
+                  document.getElementById('currentValue').innerText = data.heartRate;
+              });
+      }
+
+      setInterval(fetchCurrentValue, 5000);
+    </script>
+</head>
+  <body onload="fetchCurrentValue();">
     <div id="leaf-rain">
       <div class="top--half">
         <div id="main-text">
