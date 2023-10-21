@@ -87,10 +87,12 @@ h3 {
 }
 /* Footer */
 footer {
+	background-color: #2f4c31;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-items: center;
 	margin-top: 100px;
+	padding: 50px;
 }
 footer .card {
 	background: $light;
@@ -98,11 +100,12 @@ footer .card {
 	border-radius: 8px;
 	padding: 20px;
 	margin: 10px 0;
+	border: solid 5px $green;
 }
 #leaf-rain {
 	background: url("images/leaf-3.png");
 	background-size: 10%;
-	//animation: leaf-rain 2000s linear infinite;
+	animation: leaf-rain 2000s linear infinite;
 	background-position: center top;
 }
 
