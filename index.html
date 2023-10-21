@@ -13,15 +13,18 @@
 	<!-- Link SCSS -->
 	<link rel="stylesheet" href="styles.css">
 	<title>HeartSet</title>
-	<script src="/main.js" type="module">
-		function fetchCurrentValue() {
-			fetch('/getCurrentValue')
-			.then(response => response.json())
-			.then(data => {
-				document.getElementById('currentValue').innerText = data.heartRate;
-			});
-    		changeColor();
-		}
+	<script>
+		async function fetchCurrentValue() {
+    try {
+        const response = await fetch('/getCurrentValue');
+        const data = await response.json();
+        document.getElementById('currentValue').innerText = data.heartRate;
+        changeColor(); // If this relies on the fetched data, pass it as an argument
+    } catch (error) {
+        console.error('Error fetching current value:', error);
+    }
+}
+		setInterval(fetchCurrentValue, 5000);
 	</script>
 </head>
 <body onload="fetchCurrentValue();">
