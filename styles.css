@@ -8,6 +8,10 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.small-view {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -31,8 +35,7 @@ h3 {
   display: flex;
   height: 85px;
   align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 
 /* Top Half */
@@ -131,8 +134,25 @@ footer .card {
   }
 }
 @media screen and (max-width: 1000px) {
-  body {
+  #leaf-rain {
     display: none;
-    content: "Please open on a larger view";
   }
-}/*# sourceMappingURL=styles.css.map */
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .small-view {
+    display: block;
+  }
+  .small-view p {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
