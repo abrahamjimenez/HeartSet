@@ -13,6 +13,7 @@ body {
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
+
 .small-view {
 	display: none;
 }
@@ -141,6 +142,35 @@ footer .card {
 	}
 }
 
+@keyframes beat-heart {
+	0% {
+		transform: scale(1);
+	}
+	45% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	55% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.top__img img {
+	height: 80px;
+	animation-name: beat-heart;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
 @media (prefers-reduced-motion) {
 	#leaf-rain {
 		background: url("images/leaf-3.png");
@@ -149,7 +179,8 @@ footer .card {
 }
 
 // _media-query.scss
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 800px) {
 	#leaf-rain {
 		display: none;
 	}
@@ -171,5 +202,6 @@ footer .card {
 			font-size: 1.4rem;
 			margin-bottom: 16px;
 		}
+
 	}
 }
