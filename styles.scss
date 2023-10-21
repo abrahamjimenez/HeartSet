@@ -26,10 +26,15 @@ a {
 }
 h1 {
     color: $yellow;
-    font-family: 'Handlee', cursive;
+    font-family: 'Courgette', cursive;
 }
 h3 {
     margin-bottom: 5px;
+}
+.logo {
+    display: flex;
+    height: 70px;
+    font-size: 1.5em;
 }
 .top--half {
     display: grid;
